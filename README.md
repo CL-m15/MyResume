@@ -55,7 +55,7 @@ This tab simply displays the personal information, with some additional info suc
 - It has different sections like personal details, education, summary and others.
 
 ## Acknowledgement
-This project is largely inspired by Swiftful Thinking, whereas the design of the first tab was from SwiftUI Map App (Beginner Level). 
+This project is largely inspired by **Swiftful Thinking**, whereas the design of the first tab was from _SwiftUI Map App (Beginner Level)_. 
 Please do check it out! [_Click Here_](https://www.youtube.com/playlist?list=PLwvDm4Vfkdpha5eVTjLM0eRlJ7-yDDwBk)
 
 ## Contact
