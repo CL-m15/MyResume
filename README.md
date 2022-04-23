@@ -17,6 +17,9 @@
 - Allow recruiters to evaluate my coding skills.
 
 ## Description
+<!-- Images Section -->
+<img src="/Images/lightmode.png" width="20%"> <img src="/Images/darkmode.png" width="20%">
+
 - This app is built using Xcode 13.2, and the iOS 15 is used.
 - **Combine Framework** is used as well, mainly to get the latest update of list of experiences.
 ```
@@ -38,6 +41,9 @@ $searchText
 ### Section 1 - Map Tab
 This tab mainly consists of a map, preview stack of the experience selected, and a header text of the current selected experience.
 
+<!-- Images Section -->
+<img src="/Images/maptab1.png" width="20%"> <img src="/Images/maptab2.png" width="20%"> <img src="/Images/maptab3.png" width="20%">
+
 - The header can be tapped to show the list of experiences. Once tapped, it will bring you to the tapped experience.
 - There are few types that can be selected in order to sort the experience type, and it will reflect the whole view as well.
 - As for the preview stack, there is a _Details_ button, it will present a _DetailView_ of the current experience.
@@ -45,12 +51,18 @@ This tab mainly consists of a map, preview stack of the experience selected, and
 ### Section 2 - List Tab
 This tab consists of all the experience cards, a search bar and filtering picker.
 
+<!-- Images Section -->
+<img src="/Images/listtab1.png" width="20%"> <img src="/Images/listtab2.png" width="20%"> <img src="/Images/listtab3.png" width="20%">
+
 - The filtering picker helps sort the experience type accordingly.
 - The search bar allows user to filter the list using **Title**, **Location** or **Country**.
 - The experience cards can be tapped to show the _DetailView_ as well.
 
 ### Section 3 - Personal Tab
 This tab simply displays the personal information, with some additional info such as skills, certificates and so on.
+
+<!-- Images Section -->
+<img src="/Images/personaltab1.png" width="20%"> <img src="/Images/personaltab2.png" width="20%">
 
 - It has different sections like personal details, education, summary and others.
 
