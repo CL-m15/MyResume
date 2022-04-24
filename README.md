@@ -4,7 +4,7 @@
 ## Table of contents
 * [Objective](#objective)
 * [Deployment](#deployment)
-  - [Prerequisite](#prerequisite)
+  - [Pre-requisite](#pre-requisite)
   - [Setup](#setup)
   - [Modify](#modify)
 * [Description](#description)
