@@ -1,8 +1,9 @@
 # MyResume - Experience Showcase
-> A simple app that created with Swift language to showcase my own experiences in details including Working, Project as well as some other interesting experiences!
+> A simple app that created with Swift language to showcase my own experiences in details including Working, Project as well as some other interesting experiences. This is a simple [_demo video_](https://www.youtube.com/watch?v=6_QWFacEjL4&t=8s) for your reference!
 
 ## Table of contents
 * [Objective](#objective)
+* [Deployment](#deployment)
 * [Description](#description)
   - [Section 1 - Map Tab](#section-1---map-tab)
   - [Section 2 - List Tab](#section-2---list-tab)
@@ -16,11 +17,68 @@
 - More interactive UI to present compared to looking through a piece of paper.
 - Allow recruiters to evaluate my coding skills.
 
+## Deployment
+#### Pre-requisite
+1. Xcode version - 13.0
+2. OS System - iOS 15.0
+3. Device - iPhone
+
+----
+#### Setup
+1. Download the repo using **Download ZIP**, or clone it directly to your GitHub Desktop if you have one.
+2. Open up the project using Xcode by clicking the **.xcodeproj** file.
+3. Once the project is launched in Xcode, you can first choose your preferred iOS simulator device to run the app.
+   - Go to Xcode menu bar, look for **Product**.
+   - From the list, click **Destination**, you are able to choose your preferred device to run the simulation from there, for example: iPhone 13 Pro.
+4. After choosing the destination, press **CMD+Shift+K** to clean build folder.
+5. Once they are all done, press **CMD+R** to run the simulator, or click the play button at the top left corner of Xcode.
+
+---
+#### Modify
+There are two different models created, which are _Personal_ and _Experience_. _Personal_ mainly consists of the personal details such as name, email, education and others, while _Experience_ contains the details of the experience.
+
+1. Navigate to the file named _ExperienceDataService_ in the DataService folder.
+2. There is a static variable called **personalDetails**, which holds the personal details. 
+   ```
+   struct Personal {
+        let firstName: String
+        let lastName: String
+        var fullName: String { firstName + ", " + lastName }
+        let email: String
+        let contactNumber: String
+        let personalImage: String?
+        var executiveSummary: String
+        var education: Experience
+        var language: [Language]
+        var skills: [String]
+        var certificates: [String]?
+   }
+   ```
+   - You can modify it accordingly.
+   - The display pic can be changed by replacing the image named personal with your own picture.
+3. Another static variable called **experiences** contains all the experiences that I put in the app.
+   ```
+   struct Experience: Identifiable, Equatable, Comparable {
+        var id = UUID()
+        var title: String
+        var description: [String]
+        var type: ExperienceType
+        var startDate: String // eg: Jan 2022
+        var endDate: String?
+        let imageNames: [String]
+        var location: Location
+        var link: String?
+   }
+   ```
+   - You can edit by replacing them with your own experiences.
+   - Some data is optional like _endDate_ or _link_, which means that you can ignore them.
+
 ## Description
 <!-- Images Section -->
 <img src="/Images/lightmode.png" width="20%"> <img src="/Images/darkmode.png" width="20%">
 
 - This app is built using Xcode 13.2, and the iOS 15 is used.
+- The architecture used in this app is MVVM (Model-View-ViewModel).
 - **Combine Framework** is used as well, mainly to get the latest update of list of experiences.
 ```
 // Example:
@@ -38,7 +96,8 @@ $searchText
 - The details that can be found includes title, location, time, descriptions, and photos.
 - The experiences are all listed in the code. 
 
-### Section 1 - Map Tab
+---
+#### Section 1 - Map Tab
 This tab mainly consists of a map, preview stack of the experience selected, and a header text of the current selected experience.
 
 <!-- Images Section -->
@@ -48,7 +107,8 @@ This tab mainly consists of a map, preview stack of the experience selected, and
 - There are few types that can be selected in order to sort the experience type, and it will reflect the whole view as well.
 - As for the preview stack, there is a _Details_ button, it will present a _DetailView_ of the current experience.
 
-### Section 2 - List Tab
+---
+#### Section 2 - List Tab
 This tab consists of all the experience cards, a search bar and filtering picker.
 
 <!-- Images Section -->
@@ -58,7 +118,8 @@ This tab consists of all the experience cards, a search bar and filtering picker
 - The search bar allows user to filter the list using **Title**, **Location** or **Country**.
 - The experience cards can be tapped to show the _DetailView_ as well.
 
-### Section 3 - Personal Tab
+---
+#### Section 3 - Personal Tab
 This tab simply displays the personal information, with some additional info such as skills, certificates and so on.
 
 <!-- Images Section -->
