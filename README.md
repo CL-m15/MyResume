@@ -4,6 +4,9 @@
 ## Table of contents
 * [Objective](#objective)
 * [Deployment](#deployment)
+  - [Prerequisite](#prerequisite)
+  - [Setup](#setup)
+  - [Modify](#modify)
 * [Description](#description)
   - [Section 1 - Map Tab](#section-1---map-tab)
   - [Section 2 - List Tab](#section-2---list-tab)
@@ -19,9 +22,9 @@
 
 ## Deployment
 #### Pre-requisite
-1. Xcode version - 13.0
-2. OS System - iOS 15.0
-3. Device - iPhone
+1. Xcode version - **13.0 & above**
+2. OS System - **iOS 15.0 & above**
+3. Device - **iPhone**
 
 ----
 #### Setup
@@ -37,7 +40,7 @@
 #### Modify
 There are two different models created, which are _Personal_ and _Experience_. _Personal_ mainly consists of the personal details such as name, email, education and others, while _Experience_ contains the details of the experience.
 
-1. Navigate to the file named _ExperienceDataService_ in the DataService folder.
+1. Navigate to the file named _ExperienceDataService_ in the _DataService_ folder.
 2. There is a static variable called **personalDetails**, which holds the personal details. 
    ```
    struct Personal {
@@ -78,7 +81,7 @@ There are two different models created, which are _Personal_ and _Experience_. _
 <img src="/Images/lightmode.png" width="20%"> <img src="/Images/darkmode.png" width="20%">
 
 - This app is built using Xcode 13.2, and the iOS 15 is used.
-- The architecture used in this app is MVVM (Model-View-ViewModel).
+- The architecture used in this app is **MVVM** (Model-View-ViewModel).
 - **Combine Framework** is used as well, mainly to get the latest update of list of experiences.
 ```
 // Example:
@@ -92,7 +95,7 @@ $searchText
     .store(in: &cancellables)
 ```
 - It is separated into three big parts, which are Map Tab, List Tab, and Personal Tab. Kindly check the correspond sections below for further information.
-- There are three main types of experiences that I have separated into, which are **WORK**, **PROJECT** and **EDUCATION**.
+- There are three main types of experiences that I have separated into, which are **Work**, **Project** and **Education**.
 - The details that can be found includes title, location, time, descriptions, and photos.
 - The experiences are all listed in the code. 
 
